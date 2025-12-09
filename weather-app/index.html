@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-img">
+            <img src="./images/icons.png" alt="">
+        </div>
+        <div class="input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search for City ...">
+        </div>
+        <div class="icons-sunny">
+            <img src="./images/sunny1.png" alt="">
+           <div class="img-moon">
+             <img src="./images/moon.png" alt="">
+           </div>
+        </div>
+    </div>
+    <div class="main">
+    <div class="main-city">
+        <div class="partly">
+            <h2 id="title-city">
+                <i class="fa-solid fa-location-dot"></i>
+                madrid
+            </h2>
+            <img src="./images/icons.png" alt="" id="img-city">
+        </div>
+        <h1 id="temperature">35°</h1>
+        <p id="day">monday, 15 April 10:30 AM</p>
+    </div>
+    <div class="main-status">
+        <div class="status">
+            <i class="fa-solid fa-droplet"></i>
+            <p>Humidity</p>
+            <h3>85%</h3>
+        </div>
+        <div class="status">
+           <i class="fa-solid fa-wind"></i>
+            <p>Wind</p>
+            <h3>12 km/hr</h3>
+        </div>
+        <div class="status">
+            <i class="fa-solid fa-sun"></i>
+            <p>UV index</p>
+            <h3>4</h3>
+        </div>
+        <div class="status">
+          <div class="sunrise">
+             <i class="fa-solid fa-sun"></i>
+           </div>
+            <p>Sunrise</p>
+            <h3>6:04 AM</h3>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1A1C1F;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+/* Logo */
+.container-img img {
+    width: 40px;
+}
+
+/* Search Box */
+.input {
+    display: flex;
+    align-items: center;
+    background: #2A2D31;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.input i {
+    color: #fff;         
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input input {
+    width: 180px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+
+
+.icons-sunny {
+    background: #2A2D31;
+    width: 70px;
+    padding: 8px 0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img-moon{
+    background-color: #1DA1F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    width: 25px;
+    height: 25px;
+    
+}
+.icons-sunny img {
+    width: 18px;
+    filter: brightness(0) saturate(100%) invert(77%) sepia(78%) saturate(847%) hue-rotate(13deg) brightness(100%) contrast(95%);
+}
+/* Container global */
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/*MAIN CITY BLOCK*/
+
+.main-city {
+    background-color: #2A2D31;
+    width: 420px;
+    height: 260px;
+    border-radius: 25px;
+    padding: 20px 25px;
+    color: #fff;
+}
+
+.partly {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partly img {
+    width: 90px;
+}
+
+#title-city {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+#temperature {
+    font-size: 70px;
+    margin-top: 10px;
+}
+
+#day {
+    opacity: 0.7;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/*  STATUS CARDS  */
+
+.main-status {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.status {
+    background: #2A2D31;
+    width: 180px;
+    height: 110px;
+    border-radius: 20px;
+    padding: 15px;
+    color: #fff;
+}
+
+
+.status i{
+    color: #1DA1F2;
+    
+}
+
+.status p {
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.status h3 {
+    margin-top: 3px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sunrise {
+  position: relative;
+  display: inline-block;
+}
+.sunrise::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 3px;
+  background: #1DA1F2;
+  bottom: 0;
+  left: -10%;
+}
+
