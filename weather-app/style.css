@@ -11,10 +11,11 @@ body {
 }
 .container {
     display: flex;
-    margin: 20px;
-    justify-content: space-between;
+    margin: 15px;
+  
+    justify-content: space-around;
     align-items: center;
-    padding: 15px 25px;
+    padding: 10px 20px;
 }
 
 /* Logo */
@@ -119,7 +120,6 @@ body {
 }
 
 /*  STATUS CARDS  */
-
 .main-status {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -138,7 +138,6 @@ body {
     color: #1DA1F2;
     
 }
-
 .status p {
     margin-top: 5px;
     font-size: 14px;
@@ -149,8 +148,6 @@ body {
     margin-top: 3px;
     font-size: 18px;
 }
-
-
 
 .sunrise {
   position: relative;
@@ -172,7 +169,15 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px 50px ;
+    flex-wrap: wrap;
 }
+
+.forecast1 h3,
+.forecast-weekly h3 { 
+    margin-left: 350px;           
+    padding-top: 20px;        
+}
+
 .item {
     background: #2A2D31;
     padding: 18px 14px;
@@ -202,6 +207,57 @@ body {
 .item.now {
     background: #0096ff;
 }
+
+.forecast-weekly {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.weekly-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2A2D31;
+    padding: 18px 20px;
+    width: 55%;
+    margin:15px auto;
+    gap: 10px;
+}
+.day-card {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day-card:last-child {
+    border-right: none;
+}
+
+.day {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
+.day-card img {
+    width: 40px;
+    margin: 8px 0;
+}
+
+.temp {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.low {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 3px;
+}
+
+/**************/
 .footer {
     display: flex;
     justify-content: space-around;
@@ -216,7 +272,7 @@ body {
     gap: 10px;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
@@ -236,7 +292,7 @@ body {
 
 hr {
     width: 70%;
-    margin: 40px auto;
+    margin: 30px auto;
     border: 1px solid;
     border-top: 1px solid ;
 }
