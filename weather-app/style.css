@@ -4,13 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background: #1A1C1F;
     font-family: Arial, sans-serif;
     color: #fff;
 }
-
 .container {
     display: flex;
     margin: 20px;
@@ -31,6 +29,7 @@ body {
     background: #2A2D31;
     padding: 10px 15px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .input i {
@@ -47,8 +46,6 @@ body {
     outline: none;
     font-size: 14px;
 }
-
-
 
 .icons-sunny {
     background: #2A2D31;
@@ -89,7 +86,7 @@ body {
     background-color: #2A2D31;
     width: 420px;
     height: 260px;
-    border-radius: 25px;
+    border-radius:5px;
     padding: 20px 25px;
     color: #fff;
 }
@@ -133,12 +130,10 @@ body {
     background: #2A2D31;
     width: 180px;
     height: 110px;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 15px;
     color: #fff;
 }
-
-
 .status i{
     color: #1DA1F2;
     
@@ -157,16 +152,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
 .sunrise {
   position: relative;
   display: inline-block;
@@ -181,3 +166,77 @@ body {
   left: -10%;
 }
 
+.forecast {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 50px ;
+}
+.item {
+    background: #2A2D31;
+    padding: 18px 14px;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+    color: #fff;
+}
+
+.item .time {
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.item .icon {
+    display: block;
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.item .temp {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.item.now {
+    background: #0096ff;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+.footer-icon {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.footer-icon a i {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-icon a i:hover {
+    color: #0096ff; /* effet au survol */
+}
+
+.footer-bottom {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+hr {
+    width: 70%;
+    margin: 40px auto;
+    border: 1px solid;
+    border-top: 1px solid ;
+}

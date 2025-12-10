@@ -16,13 +16,15 @@
             <img src="./images/icons.png" alt="">
         </div>
         <div class="input">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search for City ...">
+           <i class="fa-solid fa-magnifying-glass" id="searchbtn"></i>
+            <input type="text" placeholder="Search for City ..." id="searchinput" spellcheck="false">
         </div>
         <div class="icons-sunny">
-            <img src="./images/sunny1.png" alt="">
+            <img src="./images/sunny1.png" alt="" id="img-icons">
            <div class="img-moon">
-             <img src="./images/moon.png" alt="">
+             <i class="fas fa-moon"></i>
+            
+
            </div>
         </div>
     </div>
@@ -35,36 +37,51 @@
             </h2>
             <img src="./images/icons.png" alt="" id="img-city">
         </div>
-        <h1 id="temperature">35°</h1>
+        <h1 id="temperature">35°c</h1>
         <p id="day">monday, 15 April 10:30 AM</p>
     </div>
     <div class="main-status">
-        <div class="status">
+      <div class="status">
             <i class="fa-solid fa-droplet"></i>
-            <p>Humidity</p>
-            <h3>85%</h3>
+            <p >Humidity</p>
+            <h3 id="Humidity">85%</h3>
         </div>
         <div class="status">
            <i class="fa-solid fa-wind"></i>
             <p>Wind</p>
-            <h3>12 km/hr</h3>
+            <h3 id="Wind">12 km/hr</h3>
         </div>
         <div class="status">
             <i class="fa-solid fa-sun"></i>
             <p>UV index</p>
-            <h3>4</h3>
+            <h3 class="index">4</h3>
         </div>
         <div class="status">
           <div class="sunrise">
              <i class="fa-solid fa-sun"></i>
            </div>
             <p>Sunrise</p>
-            <h3>6:04 AM</h3>
+            <h3 id="sunrise">6:04 AM</h3>
         </div>
+    </div>
+</div>
+<!--forecast--->
+<div class="forecast">
+    
+</div>
+<hr>
+<!-- Footer -->
+<div class="footer">
+     <div class="footer-bottom">
+        © 2025 WeatherApp — All rights reserved.
+    </div>
+    <div class="footer-icon">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
     </div>
 
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
