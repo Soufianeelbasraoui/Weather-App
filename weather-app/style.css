@@ -79,6 +79,7 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 /*MAIN CITY BLOCK*/
@@ -87,7 +88,6 @@ body {
     background-color: #2A2D31;
     width: 420px;
     height: 260px;
-    border-radius:5px;
     padding: 20px 25px;
     color: #fff;
 }
@@ -130,7 +130,6 @@ body {
     background: #2A2D31;
     width: 180px;
     height: 110px;
-    border-radius: 5px;
     padding: 15px;
     color: #fff;
 }
@@ -172,16 +171,11 @@ body {
     flex-wrap: wrap;
 }
 
-.forecast1 h3,
-.forecast-weekly h3 { 
-    margin-left: 350px;           
-    padding-top: 20px;        
-}
 
 .item {
     background: #2A2D31;
     padding: 18px 14px;
-    border-radius: 5px;
+    
     width: 80px;
     text-align: center;
     color: #fff;
@@ -209,24 +203,33 @@ body {
 }
 
 .forecast-weekly {
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
     width: 100%;
     margin-top: 40px;
 }
-
+.h3{
+    width: 47%;
+    display: flex;
+    justify-content: center;
+}
 .weekly-cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     background: #2A2D31;
     padding: 18px 20px;
-    width: 55%;
-    margin:15px auto;
+    width: 66%;
+    margin:10px auto;
     gap: 10px;
 }
 .day-card {
     flex: 1;
     text-align: center;
-    padding: 12px 0;
+    padding: 10px 0;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -296,3 +299,17 @@ hr {
     border: 1px solid;
     border-top: 1px solid ;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
