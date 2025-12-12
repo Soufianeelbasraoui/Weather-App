@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
-
+<body class="day-theme">
     <div class="container">
         <div class="container-img">
             <img src="./images/icons.png" alt="">
@@ -19,12 +18,10 @@
            <i class="fa-solid fa-magnifying-glass" id="searchbtn"></i>
             <input type="text" placeholder="Search for City ..." id="searchinput" spellcheck="false">
         </div>
-        <div class="icons-sunny">
-            <img src="./images/sunny1.png" alt="" id="img-icons">
-           <div class="img-moon">
-             <i class="fas fa-moon"></i>
-           </div>
-        </div>
+    <div class="icons-sunny" id="theme-toggle">
+      <button class="visible" id="btn-sunny"> <img src="./images/sunny1.png" alt="Icône Soleil" id="img-sunny" ></button>
+    </div>
+
     </div>
     <hr>
     <div class="main">
@@ -80,50 +77,9 @@
     </div>
 
     <div class="weekly-cards">
-        <div class="day-card">
-            <p class="day">Tuesday</p>
-            <img src="https://img.icons8.com/color/48/sun.png" alt="sun" />
-            <p class="temp">23°C</p>
-            <p class="low">18°</p>
-        </div>
-
-        <div class="day-card">
-            <p class="day">Wednesday</p>
-            <img src="https://img.icons8.com/color/48/cloud.png" alt="cloud" />
-            <p class="temp">23°C</p>
-            <p class="low">18°</p>
-        </div>
-
-        <div class="day-card">
-            <p class="day">Thursday</p>
-            <img src="https://img.icons8.com/color/48/clouds.png" alt="clouds" />
-            <p class="temp">23°C</p>
-            <p class="low">18°</p>
-        </div>
-
-        <div class="day-card">
-            <p class="day">Friday</p>
-            <img src="https://img.icons8.com/color/48/rain.png" alt="rain" />
-            <p class="temp">23°C</p>
-            <p class="low">18°</p>
-        </div>
-
-        <div class="day-card">
-            <p class="day">Saturday</p>
-            <img src="https://img.icons8.com/color/48/partly-cloudy-day.png" alt="sun-cloud" />
-            <p class="temp">23°C</p>
-            <p class="low">18°</p>
-        </div>
-
-        <div class="day-card">
-            <p class="day">Sunday</p>
-            <img src="https://img.icons8.com/color/48/cloud.png" alt="cloud" />
-            <p class="temp">23°C</p>
-            <p class="low">18°</p>
-        </div>
+    
     </div>
 </div>
-
 <hr>
 <!-- Footer -->
 <div class="footer">

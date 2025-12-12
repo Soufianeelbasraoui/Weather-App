@@ -7,13 +7,17 @@ const searchbtn=document.getElementById("searchbtn");
 
 
 async function checkWeather(city) {
-
+    
     console.log(city)
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
     const data = await response.json();
     console.log(data);
+   if (data.cod !== 200) {
+        alert("City not found! Please try another one.");
+        return; 
+    }
     document.getElementById("title-city").innerHTML=data.name;
-    document.getElementById("temperature").innerHTML=data.main.temp+ "°c";
+    document.getElementById("temperature").innerHTML=Math.round(data.main.temp)+ "°C";
     document.getElementById("Humidity").innerHTML=data.main.humidity + "%";
     document.getElementById("Wind").innerHTML=data.wind.speed  + "km/hr";
     console.log(data.weather[0].icon)
@@ -23,7 +27,7 @@ async function checkWeather(city) {
      getForecast(data.coord.lat, data.coord.lon);
      getWeekly(data.coord.lat,data.coord.lon)
 }
-checkWeather("rabat");
+checkWeather("beni mellal");
 searchbtn.addEventListener("click", ()=>{
     checkWeather(searchinput.value);
       
@@ -78,9 +82,9 @@ const convertsunrise=(data)=>{
             <div class="item ${index === 0 ? "now" : ""}">
                 <span class="time">${index === 0 ? "Now" : time}</span>
                 <span class="icon">
-                    <img src="${icon}" width="35">
+                    <img src="${icon}" width="40" >
                 </span>
-                <span class="temp">${temp}°</span>
+                <span class="temp">${temp}°C</span>
             </div>
         `;
     });
@@ -107,7 +111,9 @@ function getWeekly(lat,lon){
           weekdayfascat.innerHTML+=`
           <div class="day-card">
          <p class="day">${dayName}</p>
-            <img src="${icons}" width="35">
+              <span class="icon">
+                    <img src="${icons}" width="40" >
+                </span>
             <p class="temp">${temp}°c</p>
             <p class="low">${low} °c</p>
          </div>
@@ -116,3 +122,14 @@ function getWeekly(lat,lon){
        })
 }
 
+// light mode est dark mode
+let body=document.body;
+let themetoggle = document.getElementById("theme-toggle");
+let btnsunny=document.getElementById("btn-sunny");
+
+function toggleTheme(){
+    body.classList.toggle('night-theme');
+    let isNight = body.classList.contains("night-theme");
+    body.classList.toggle('day-theme', !isNight);
+}
+themetoggle.addEventListener('click', toggleTheme);

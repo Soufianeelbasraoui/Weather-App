@@ -8,7 +8,11 @@ body {
     background: #1A1C1F;
     font-family: Arial, sans-serif;
     color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    min-height: 100vh;
+    padding: 20px;
 }
+
 .container {
     display: flex;
     margin: 15px;
@@ -50,7 +54,7 @@ body {
 
 .icons-sunny {
     background: #2A2D31;
-    width: 70px;
+    width: 50px;
     padding: 8px 0;
     border-radius: 30px;
     display: flex;
@@ -65,8 +69,7 @@ body {
     border: none;
     border-radius: 10px;
     width: 25px;
-    height: 25px;
-    
+    height: 25px; 
 }
 .icons-sunny img {
     width: 18px;
@@ -91,13 +94,11 @@ body {
     padding: 20px 25px;
     color: #fff;
 }
-
 .partly {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .partly img {
     width: 90px;
 }
@@ -142,12 +143,10 @@ body {
     font-size: 14px;
     opacity: 0.8;
 }
-
 .status h3 {
     margin-top: 3px;
     font-size: 18px;
 }
-
 .sunrise {
   position: relative;
   display: inline-block;
@@ -170,7 +169,6 @@ body {
     margin: 20px 50px ;
     flex-wrap: wrap;
 }
-
 
 .item {
     background: #2A2D31;
@@ -299,17 +297,35 @@ hr {
     border: 1px solid;
     border-top: 1px solid ;
 }
+/* dark mod        */
+.day-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+.day-theme .input,
+.day-theme .icons-sunny,
+.day-theme .main-city,
+.day-theme .status,
+.day-theme .item,
+.day-theme .weekly-cards{
+    background-color: #F8FAFC; 
+    color: #333333;
+}
+.day-theme .day-card{
+     border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.day-theme .footer-bottom,
+.day-theme .footer-icon i,
+.day-theme .temp{
+    color: #2A2D31;
+}
+.day-theme .input>i{
+    color: #333333;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+#theme-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
