@@ -5,17 +5,18 @@ const apiKey = "9b84f42d0f4625a201f4e06b12067f89";
 const searchinput=document.getElementById("searchinput");
 const searchbtn=document.getElementById("searchbtn");
 
-
 async function checkWeather(city) {
     
     console.log(city)
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
+    
+    const cityNotfound=document.querySelector(".inputcity");
+    cityNotfound.innerHTML="";
+ 
+   try{
+     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
     const data = await response.json();
     console.log(data);
-   if (data.cod !== 200) {
-        alert("City not found! Please try another one.");
-        return; 
-    }
+
     document.getElementById("title-city").innerHTML=data.name;
     document.getElementById("temperature").innerHTML=Math.round(data.main.temp)+ "°C";
     document.getElementById("Humidity").innerHTML=data.main.humidity + "%";
@@ -26,6 +27,9 @@ async function checkWeather(city) {
     convertsunrise(data)
      getForecast(data.coord.lat, data.coord.lon);
      getWeekly(data.coord.lat,data.coord.lon)
+   }catch (error){
+       cityNotfound.innerHTML="<p>City not found! Please try another one.</p>";
+   }
 }
 checkWeather("beni mellal");
 searchbtn.addEventListener("click", ()=>{
